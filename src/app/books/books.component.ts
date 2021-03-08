@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Book } from '../book';
+import {Component, OnInit} from '@angular/core';
+import {Book, genre} from '../book';
 
 @Component({
   selector: 'app-books',
@@ -11,7 +11,7 @@ export class BooksComponent implements OnInit {
   bookharrypotter1: Book = {
     name: 'Harry Potter en de steen der wijze',
     pages : 200,
-    genre: 'fantasy'
+    genre: genre.FANTASY
   };
 
   constructor() { }
