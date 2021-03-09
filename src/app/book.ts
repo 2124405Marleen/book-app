@@ -2,6 +2,9 @@ export interface Book {
   name: string;
   pages: number;
   genre: genre;
+  rating: stars;
+  review: string;
+  favorites: boolean;
 }
 
 export enum genre{
@@ -22,5 +25,14 @@ export enum genre{
   HISTORY= 'History',
   MEMOIR= 'Memoir',
   TRUECRIME= 'True Crime',
-  SELFHELP= 'Self Help'
+  SELFHELP= 'Self Help',
+  MISTERY = 'Mistery'
+}
+
+export enum stars{
+  onestar = 1,
+  twostars,
+  threestars,
+  fourstars,
+  fivestarts
 }
