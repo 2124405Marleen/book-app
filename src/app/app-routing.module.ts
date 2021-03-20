@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: 'books-component', component: BooksComponent},
   {path: 'about-component', component: AboutMeComponent},
   {path: 'home-component', component: HomePageComponent},
+  {path: '', component: HomePageComponent},
 ];
 
 @NgModule({
