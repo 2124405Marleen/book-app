@@ -1,10 +1,14 @@
 export interface Book {
+  isbn: number;
   name: string;
   pages: number;
   genre: genre;
   rating: stars;
   review: string;
   favorites: boolean;
+  // yearread:;
+  // monthread:;
+  // yearwritten:;
 }
 
 export enum genre{
