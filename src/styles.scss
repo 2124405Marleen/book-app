@@ -1,19 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 h1 {
-  color: #3e6b89;
   font-size: large;
+  -webkit-text-fill-color: #3e6b89;
 }
 
 h2 {
-  color: black;
+  -webkit-text-fill-color: black;
   font-size: medium;
 }
 
 h3 {
-  color: black;
+  -webkit-text-fill-color: black;
   font-size: small;
 }
 body{
   font-family: Bahnschrift, serif;
+  text-align: center;
 }
 
+.well{
+  margin: 3%;
+  horiz-align: center;
+  text-align: center;
+  background-color: #dce9ef !important;
+}
+
+.accent-color{
+  color: darkgreen;
+}
