@@ -1,5 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Book, genre, stars} from '../book';
+import {HttpClient} from '@angular/common/http';
+
+export interface Book{
+  ISBN: string;
+  BookName: string;
+  Rating: number;
+}
 
 @Component({
   selector: 'app-books',
@@ -8,17 +14,14 @@ import {Book, genre, stars} from '../book';
 })
 export class BooksComponent implements OnInit {
 
-  bookharrypotter1: Book = {
-    isbn: 1,
-    name: 'Harry Potter en de steen der wijze',
-    pages : 200,
-    genre: genre.FANTASY,
-    rating: stars.fourstars,
-    review: 'no review',
-    favorites: true,
-  };
+  books: Book[] = [];
+  constructor(http: HttpClient) {
+    http.get('http://localhost:3000/books').subscribe( (rec: Book[]) => {
 
-  constructor() { }
+
+      this.books = rec;
+    });
+  }
 
   ngOnInit(): void {
   }

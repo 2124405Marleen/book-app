@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomePageComponent } from './home-page/home-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
