@@ -7,6 +7,8 @@ import { BooksComponent } from './books/books.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

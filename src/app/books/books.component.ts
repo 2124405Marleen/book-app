@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-export interface Book{
+export interface  Book{
   ISBN: string;
   BookName: string;
   Rating: number;
