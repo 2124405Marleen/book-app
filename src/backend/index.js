@@ -1,8 +1,6 @@
 const fs = require('fs').promises;
 
 const express = require('express');
-const bodyParser = require('body-parser');
-const Book = require("./models/book.model");
 const cors = require('cors');
 const app = express();
 
@@ -11,8 +9,10 @@ app.use(cors());
 
 const port = 3000;
 const bookRouter = require('./routes/book.routes');
+const genreCountRouter = require('./routes/genrecount.routes');
 
 app.use(bookRouter);
+app.use(genreCountRouter);
 // app.get('/', function (req, res) {
 //   var dbresult = Book.findAll();
 //   res.send(dbresult);

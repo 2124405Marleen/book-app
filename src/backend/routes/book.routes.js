@@ -3,6 +3,8 @@ const Books = require("../controllers/book.controller.js")
 const router = express.Router();
 const cors = require('cors');
 
+
+
 router.get('/books', cors(), async (req,res) => {
 
   try {
@@ -23,19 +25,19 @@ router.get('/books', cors(), async (req,res) => {
   }
 })
 
-router.post('/book', async (req,res) => {
-
-  try {
-    const user= await User.create({
-      name: req.body.name
-    })
-
-    res.status(201).send(user)
-  } catch (error) {
-    res.status(400).send(error)
-
-  }
-})
+// router.post('/book', async (req,res) => {
+//
+//   try {
+//     const user= await User.create({
+//       name: req.body.name
+//     })
+//
+//     res.status(201).send(user)
+//   } catch (error) {
+//     res.status(400).send(error)
+//
+//   }
+// })
 
 module.exports = router;
 

@@ -1,0 +1,12 @@
+<p>genre-count works!</p>
+
+<div class="center" *ngIf="bookData">
+  <ngx-charts-pie-chart
+    [results]="bookData"
+
+    [legend]="true"
+    [legendTitle]="'Read books 2021'"
+    [view]="[1000,300]"
+    [labels]="true" >
+  </ngx-charts-pie-chart>
+</div>

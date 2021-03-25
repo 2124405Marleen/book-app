@@ -5,7 +5,11 @@ export interface  Book{
   ISBN: string;
   BookName: string;
   Rating: number;
+  AuthorId: number;
+  Pages: number;
+  GenreID: number;
 }
+
 
 @Component({
   selector: 'app-books',

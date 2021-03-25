@@ -5,7 +5,11 @@ const Book = function (book){
   this.ISBN = book.ISBN;
   this.BookName = book.BookName;
   this.Rating = book.Rating;
+  this.AuthorId = book.AuthorId;
+  this.Pages - book.Pages;
+  this.GenreID = book.GenreID;
 };
+
 
 // VERY GOOD QUERY!
 //SELECT * FROM `books` as book
@@ -22,4 +26,7 @@ Book.getAll = async result => {
     result(null, res);
   });
 }
+
+
+
 module.exports = Book;
