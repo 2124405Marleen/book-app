@@ -30,10 +30,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HttpClientModule,
     BrowserAnimationsModule,
     NgxChartsModule,
-    // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    BooksComponent]
 })
 export class AppModule { }
