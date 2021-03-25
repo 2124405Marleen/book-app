@@ -1,12 +1,26 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Books</h1>
-    <p>*In progress*</p>
+    <p>2021</p>
   </div>
 </div>
 
+<h2>Percentage of the goal for 2021 (50 books)</h2>
+<circle-progress
+  [percent]= "percentGoal"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#37607b'"
+  [innerStrokeColor]="'#cadce7'"
+  [animation]="true"
+  [animationDuration]="300"
+></circle-progress>
+
 <h2>Books read in 2021</h2>
 <p *ngFor="let book of books">{{book.BookName}}</p>
+
+
 
 <app-average-pages-count></app-average-pages-count>
 

@@ -12,6 +12,7 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import { GenreCountComponent } from './genre-count/genre-count.component';
 import { AddNewDataComponent } from './add-new-data/add-new-data.component';
 import { AveragePagesCountComponent } from './average-pages-count/average-pages-count.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { AveragePagesCountComponent } from './average-pages-count/average-pages-
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

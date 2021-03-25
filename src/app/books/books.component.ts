@@ -18,10 +18,11 @@ export interface  Book{
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
-
+  percentGoal: number;
   constructor(http: HttpClient) {
     http.get('http://localhost:3000/books').subscribe( (rec: Book[]) => {
       this.books = rec;
+      this.percentGoal = (100 * this.books.length) / 50;
     });
   }
 
