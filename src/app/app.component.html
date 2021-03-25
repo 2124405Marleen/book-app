@@ -37,18 +37,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" routerLink="/home-component">Bookmark</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a routerLink="/home-component" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/about-component" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/books-component" routerLinkActive="active">Books</a></li>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/books" routerLinkActive="active">Books</a></li>
+        <li><a routerLink="/add"  routerLinkActive="active">Add</a> </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+<!--      <ul class="nav navbar-nav navbar-right">-->
+<!--        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+<!--      </ul>-->
     </div>
   </div>
 </nav>
@@ -57,7 +59,8 @@
 
 <router-outlet></router-outlet>
 
-
+<br>
+<br>
 
 <div class="footer">
     <p>Bookmark My Word</p>

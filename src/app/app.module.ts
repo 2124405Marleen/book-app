@@ -10,6 +10,8 @@ import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import { GenreCountComponent } from './genre-count/genre-count.component';
+import { AddNewDataComponent } from './add-new-data/add-new-data.component';
+import { AveragePagesCountComponent } from './average-pages-count/average-pages-count.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { GenreCountComponent } from './genre-count/genre-count.component';
     BooksComponent,
     AboutMeComponent,
     HomePageComponent,
-    GenreCountComponent
+    GenreCountComponent,
+    AddNewDataComponent,
+    AveragePagesCountComponent
   ],
   imports: [
     BrowserModule,

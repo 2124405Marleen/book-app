@@ -10,7 +10,6 @@ export interface  Book{
   GenreID: number;
 }
 
-
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -19,10 +18,9 @@ export interface  Book{
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
+
   constructor(http: HttpClient) {
     http.get('http://localhost:3000/books').subscribe( (rec: Book[]) => {
-
-
       this.books = rec;
     });
   }

@@ -10,9 +10,11 @@ app.use(cors());
 const port = 3000;
 const bookRouter = require('./routes/book.routes');
 const genreCountRouter = require('./routes/genrecount.routes');
+const pageCountRouter = require('./routes/pagecount.routes');
 
 app.use(bookRouter);
 app.use(genreCountRouter);
+app.use(pageCountRouter);
 // app.get('/', function (req, res) {
 //   var dbresult = Book.findAll();
 //   res.send(dbresult);
