@@ -13,6 +13,7 @@ import { GenreCountComponent } from './genre-count/genre-count.component';
 import { AddNewDataComponent } from './add-new-data/add-new-data.component';
 import { AveragePagesCountComponent } from './average-pages-count/average-pages-count.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     BrowserAnimationsModule,
     NgxChartsModule,
     NgCircleProgressModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [

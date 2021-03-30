@@ -13,16 +13,23 @@ export class PageCount {
 export class AveragePagesCountComponent implements OnInit {
 
   allPageCounts: PageCount[] = [];
-  // totalPageCount: number;
+  totalPageCount = 0;
+  averagePageCount = 0;
   constructor(http: HttpClient) {
-    http.get('http://localhost:3000/pagecount').subscribe((rec: PageCount[]) => {
-      this.allPageCounts = rec;
 
+    http.get('http://localhost:3000/pagecount').subscribe((rec: PageCount[]) => {
+      console.log('asd');
+
+      this.allPageCounts = rec;
+      rec.forEach(r => this.totalPageCount += r.Pages);
+
+      console.log(this.totalPageCount);
       // for (let i = 1; i < this.allPageCounts.length; i++){
       //   this.totalPageCount += Number(this.allPageCounts[i].Pages);
       // }
-    });
+      this.averagePageCount = (this.totalPageCount / this.allPageCounts.length);
 
+    });
   }
 
 

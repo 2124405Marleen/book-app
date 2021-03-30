@@ -1,3 +1,2 @@
-<p>average-pages-count works!</p>
-<!--<p>Total: {{totalPageCount}}</p>-->
-
+<h1>Average page count</h1>
+<p *ngIf="allPageCounts.length > 0">The average page count is: {{averagePageCount.toFixed(0)}} (rounded to full pages)</p>

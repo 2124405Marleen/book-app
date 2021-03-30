@@ -1,1 +1,27 @@
-<p>add-new-data works!</p>
+<h1>Add new author to database</h1>
+<br>
+<form [formGroup]="form" (submit)="SaveAuthor()">
+<label>
+  Firstname:
+  <input type="text" [formControl]="author">
+</label>
+<span *ngIf="!author.valid">
+  Enter a valid name
+</span>
+<br>
+<label>
+  Gender:
+  <select [formControl]="gender">
+    <option value="1">Male</option>
+    <option value="2">Female</option>
+    <option value="3">Other</option>
+  </select>
+</label>
+<span *ngIf="!gender.valid">
+  Enter a valid gender (male, female, other)
+</span>
+<br>
+<button type="submit" [disabled]="form.invalid">Submit</button>
+
+</form>
+

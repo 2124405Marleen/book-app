@@ -11,7 +11,7 @@ const Book = function (book){
 };
 
 Book.getAll = async result => {
-  await sql.query("SELECT * FROM books", (err, res) => {
+  await sql.query("SELECT * FROM `books`", (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);
@@ -23,5 +23,17 @@ Book.getAll = async result => {
 }
 
 
+Book.AddAuthor = async (name, gender, result) => {
 
+  sql.query("INSERT INTO `authors` (`AuthorId`, `Name`, `Gender`) VALUES (NULL, ? , ?)", [name, gender], (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+    console.log("author: ", res);
+    result(null, res);
+  });
+  result("dikke ok");
+}
 module.exports = Book;

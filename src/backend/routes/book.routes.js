@@ -2,6 +2,7 @@ const express = require('express');
 const Books = require("../controllers/book.controller.js")
 const router = express.Router();
 const cors = require('cors');
+const book = require("../models/book.model");
 
 
 
@@ -24,6 +25,22 @@ router.get('/books', cors(), async (req,res) => {
     res.status(500).send()
   }
 })
+
+router.post('/author', async (req, res) => {
+  try {
+    console.log(req.body);
+
+    let name = req.body.name;
+    let gender = Number(req.body.gender);
+
+    await book.AddAuthor(name, gender, result => {
+      console.log(result)
+    });
+res.send();
+  }catch (e) {
+    console.log(e);
+  }
+});
 
 // router.post('/book', async (req,res) => {
 //
